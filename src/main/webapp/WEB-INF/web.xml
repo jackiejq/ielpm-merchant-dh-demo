@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>ielpm-merchant-dh-demo</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- 异步通知地址 -->
+	<servlet>
+		<servlet-name>notify</servlet-name>
+		<servlet-class>com.ielpm.merchant.dh.demo.servlet.NotifyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>notify</servlet-name>
+		<url-pattern>/notify.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 前台通知地址 -->
+	<servlet>
+		<servlet-name>qNotify</servlet-name>
+		<servlet-class>com.ielpm.merchant.dh.demo.servlet.QnotifyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>qNotify</servlet-name>
+		<url-pattern>/qnotify.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 代还扣款交易 -->
+	<servlet>
+		<servlet-name>dhDeduct</servlet-name>
+		<servlet-class>com.ielpm.merchant.dh.demo.servlet.DhDeductPayServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dhDeduct</servlet-name>
+		<url-pattern>/dhDeduct.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 代还还款交易 -->
+	<servlet>
+		<servlet-name>dhRepay</servlet-name>
+		<servlet-class>com.ielpm.merchant.dh.demo.servlet.DhRepayServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dhRepay</servlet-name>
+		<url-pattern>/dhRepay.do</url-pattern>
+	</servlet-mapping>
+	
+
+	<!-- 代还注册 -->
+	<servlet>
+		<servlet-name>dhRegister</servlet-name>
+		<servlet-class>com.ielpm.merchant.dh.demo.servlet.DhRegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dhRegister</servlet-name>
+		<url-pattern>/dhRegister.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 代还余额查询 -->
+	<servlet>
+		<servlet-name>dhBalanceQuery</servlet-name>
+		<servlet-class>com.ielpm.merchant.dh.demo.servlet.DhBalanceQueryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dhBalanceQuery</servlet-name>
+		<url-pattern>/dhBalanceQuery.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 代还扣款查询 -->
+	<servlet>
+		<servlet-name>dhDeductQuery</servlet-name>
+		<servlet-class>com.ielpm.merchant.dh.demo.servlet.DhDeductQueryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dhDeductQuery</servlet-name>
+		<url-pattern>/dhDeductQuery.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 代还还款查询 -->
+	<servlet>
+		<servlet-name>dhRepayQuery</servlet-name>
+		<servlet-class>com.ielpm.merchant.dh.demo.servlet.DhRepayQueryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dhRepayQuery</servlet-name>
+		<url-pattern>/dhRepayQuery.do</url-pattern>
+	</servlet-mapping>
+	
+	
+	<!-- 代还绑卡 -->
+	<servlet>
+		<servlet-name>dhBind</servlet-name>
+		<servlet-class>com.ielpm.merchant.dh.demo.servlet.DhBindServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dhBind</servlet-name>
+		<url-pattern>/dhBind.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 代还解绑 -->
+	<servlet>
+		<servlet-name>dhUnbind</servlet-name>
+		<servlet-class>com.ielpm.merchant.dh.demo.servlet.DhUnbindServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dhUnbind</servlet-name>
+		<url-pattern>/dhUnbind.do</url-pattern>
+	</servlet-mapping>
+
+</web-app>
